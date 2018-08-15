@@ -1,0 +1,23 @@
+{
+  "name": "time_between",
+  "version": "1.0.0",
+  "description": "calculates time between dates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjfreund/time_between.git"
+  },
+  "author": "R.J. Freund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjfreund/time_between/issues"
+  },
+  "homepage": "https://github.com/rjfreund/time_between#readme",
+  "dependencies": {
+    "moment": "^2.22.2",
+    "moment-precise-range-plugin": "^1.3.0"
+  }
+}
