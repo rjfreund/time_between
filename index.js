@@ -2,8 +2,7 @@ var startDateInput = document.getElementById('startDate');
 var endDateInput = document.getElementById('endDate');
 
 var fullDateOutput = document.getElementById('fullDateOutput');
-var noYearDateOutput = document.getElementById('noYearDateOutput');
-var noYearOrMonthDateOutput = document.getElementById('noYearOrMonthDateOutput');
+var daysOnlyOutput = document.getElementById('daysOnlyOutput');
 
 startDateInput.oninput = updateDateDifferences; 
 endDateInput.oninput = startDateInput.oninput;
@@ -11,12 +10,10 @@ endDateInput.oninput = startDateInput.oninput;
 
 function updateDateDifferences(){
 	fullDateOutput.innerHTML = getDateDifferenceFull();
-	//noYearDateOutput.innerHTML = getDateDifferenceNoYear();
-	noYearOrMonthDateOutput.innerHTML = getDateDifferenceNoYearOrMonth();
+	daysOnlyOutput.innerHTML = getDateDifferenceNoYearOrMonth();
 }
 
 function getDateDifferenceFull(){ return getDateDifference(true, true); }
-function getDateDifferenceNoYear(){ return getDateDifference(false, true); }
 function getDateDifferenceNoYearOrMonth(){ return getDateDifference(false, false); }
 
 function getDateDifference(hasYear, hasMonth){
