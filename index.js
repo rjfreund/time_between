@@ -24,8 +24,9 @@ function getDateDifference(hasYear, hasMonth){
 		if (hasYear && hasMonth){
 			var output = moment.preciseDiff(endDate, startDate);
 			return output;
-		} else {
-			var output = endDate.diff(startDate, 'days') + " day(s)";
+		} else {			
+			var numDays = endDate.diff(startDate, 'days');
+			var output = (numDays == 1) ? numDays + " day" : numDays + " days";
 			return output;
 		}
 	}
